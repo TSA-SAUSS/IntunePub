@@ -17,7 +17,7 @@ param ()
 $VerbosePreference = "Continue"
 $stampDate = Get-Date
 $scriptName = ([System.IO.Path]::GetFileNameWithoutExtension($(Split-Path $script:MyInvocation.MyCommand.Path -Leaf)))
-$LogFile = "$env:LocalAppData\IntuneScriptLogs\$scriptName-" + $stampDate.ToFileTimeUtc() + ".log"
+$LogFile = "C:\TSA\IntuneAppLog\Redirect-FoldersOneDrive\$scriptName-" + $stampDate.ToFileTimeUtc() + ".log"
 Start-Transcript -Path $LogFile
 
 Function Set-KnownFolderPath {
