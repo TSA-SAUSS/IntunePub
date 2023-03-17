@@ -168,7 +168,7 @@ Function Redirect-Folder {
 
         # Move files/folders into the redirected folder
         Write-Verbose "Moving data from $SetFolder to $SyncFolder\$Target"
-        Move-File -Source $Folder -Destination "$SyncFolder\$Target" -Log "$env:LocalAppData\RedirectLogs\Robocopy$Target.log"
+        Move-File -Source $Folder -Destination "$SyncFolder\$Target" -Log "C:\TSA\IntuneAppLog\Redirect-FoldersOneDrive\RedirectLogs\Robocopy$Target.log"
 
         # Hide the source folder (rather than delete it)
         Attrib +h $Folder
